@@ -34,7 +34,6 @@ gitlab:
     - GITLAB_BACKUP_TIME=01:00
   volumes:
     - /srv/docker/gitlab/gitlab:/home/git/data
-    - /home/ivlis/hobby/docker/gitlab:/var/backup
 redis:
   image: sameersbn/redis:latest
   volumes:
