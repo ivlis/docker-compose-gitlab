@@ -43,3 +43,5 @@ redis:
     - /srv/docker/gitlab/redis:/var/lib/redis
 gitlab-data:
     image: gitlab-data
+    volumes:
+      - /srv/docker/gitlab/gitlab/tmp/public:/srv/gitlab/public
