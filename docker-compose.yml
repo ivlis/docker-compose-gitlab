@@ -35,7 +35,11 @@ gitlab:
   volumes:
     - /srv/docker/gitlab/gitlab:/home/git/data
     #- /srv/docker/gitlab/gitlab-public:/home/git/gitlab/public
+  volumes_from:
+    - gitlab-data
 redis:
   image: sameersbn/redis:latest
   volumes:
     - /srv/docker/gitlab/redis:/var/lib/redis
+gitlab-data:
+    image: gitlab-data
