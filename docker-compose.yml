@@ -7,12 +7,12 @@ mysql:
   volumes:
     - /srv/docker/gitlab/mysql:/var/lib/mysql
 gitlab:
-  image: sameersbn/gitlab:7.14.3
+  #image: sameersbn/gitlab:7.14.3
+  image: gitlab-wo-nginx
   links:
     - redis:redisio
     - mysql:mysql
   ports:
-    - "10080:80"
     - "10022:22"
   environment:
     - TZ=America/Detroit
@@ -34,6 +34,7 @@ gitlab:
     - GITLAB_BACKUP_TIME=01:00
   volumes:
     - /srv/docker/gitlab/gitlab:/home/git/data
+    #- /srv/docker/gitlab/gitlab-public:/home/git/gitlab/public
 redis:
   image: sameersbn/redis:latest
   volumes:
