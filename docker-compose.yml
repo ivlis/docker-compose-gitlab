@@ -13,7 +13,7 @@ gitlab:
     - redis:redisio
     - mysql:mysql
   ports:
-    - "10022:22"
+    - "22:22"
   environment:
     - TZ=America/Detroit
     - SMTP_ENABLED=false
