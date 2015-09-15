@@ -32,6 +32,8 @@ gitlab:
     - GITLAB_EMAIL_REPLY_TO=noreply@example.com
     - GITLAB_BACKUPS=daily
     - GITLAB_BACKUP_TIME=01:00
+    - SIDEKIQ_CONCURRENCY=3
+    - UNICORN_WORKERS=2
   volumes:
     - /srv/docker/gitlab/gitlab:/home/git/data
     #- /srv/docker/gitlab/gitlab-public:/home/git/gitlab/public
