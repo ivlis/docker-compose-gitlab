@@ -25,8 +25,9 @@ gitlab:
     - SMTP_STARTTLS=true
     - SMTP_AUTHENTICATION=login
     - GITLAB_TIMEZONE=Kolkata
-    - GITLAB_HOST=localhost
-    - GITLAB_PORT=10080
+    - GITLAB_HOST=git2.ivlis.com
+    - GITLAB_PORT=443
+    - GITLAB_HTTPS=true
     - GITLAB_SSH_PORT=10022
     - GITLAB_EMAIL=admin@example.com
     - GITLAB_EMAIL_REPLY_TO=noreply@example.com
